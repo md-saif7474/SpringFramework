@@ -12,7 +12,12 @@ public class Test {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/Lifecycle/config.xml");
 		Lifecycle l = (Lifecycle) context.getBean("lifecycle");
 		System.out.println(l);
+		
+		
+		Licfecycle_Interface lf = (Licfecycle_Interface) context.getBean("p1");
+		System.out.println(lf);
 		context.registerShutdownHook();
+		
 	}
 
 }
