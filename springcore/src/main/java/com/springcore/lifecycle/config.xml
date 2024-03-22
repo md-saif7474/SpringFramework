@@ -7,14 +7,22 @@
 	 http://www.springframework.org/schema/beans/spring-beans.xsd
 	 http://www.springframework.org/schema/context
 	 http://www.springframework.org/schema/context/spring-context.xsd">
- 
+ 	
+ 	<!--To enable PostConstruct and Predestroy and also for all annotation -->
+ 	<context:annotation-config />
+ 	
+ 	
  	<!-- this is our beans -->
- 	<bean class="com.springcore.lifecycle.Lifecycle" name="lifecycle" init-method="init" destroy-method="destroy">
+ 	<!-- <bean class="com.springcore.lifecycle.Lifecycle" name="lifecycle" init-method="init" destroy-method="destroy">
  		<property name ="price" value="7" />
  	</bean>
  	
  	<bean class="com.springcore.lifecycle.Licfecycle_Interface" name="p1" >
  		<property name ="price" value="85" />
+ 	</bean> -->
+ 	
+ 	<bean class="com.springcore.lifecycle.Annotation" name="anno">
+ 		<property name="name" value="saif" />
  	</bean>
  
 </beans>
